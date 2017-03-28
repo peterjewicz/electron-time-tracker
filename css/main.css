@@ -1,0 +1,30 @@
+html, body{height: 100%; font-size: 16px;}
+.bodyContent{height: 100%;}
+.sideBar{height: 100%; border-right: 1px solid black;
+  border-top: 1px solid black; padding-right: 0px;
+  background-color: #353A47;}
+
+header{min-height: 75px; color:white; background-color: #353A47;}
+.settingsIcon{float:right; margin-right: 10px; position: relative; top: 25px;}
+
+.panel{margin-bottom:0px; border: none !important; cursor: pointer;}
+.panel-heading{background-color: #433A3F !important; color:white !important;
+border-radius: 0px !important; border: 1px solid #22223B !important; transition: all .3s;}
+.panel-heading:hover{background-color: #54afff !important;}
+
+
+/*SIDEBAR*/
+.taskItem{border-bottom: 2px solid #c3cbd8; padding-bottom: 10px; transition: all .3s;}
+.taskItem:hover{background-color: #c3cbd8;}
+.newProjectWrapper{color:white; background-color: #36af7b; padding: 10px;
+border-top: 1px solid #22223B; cursor: pointer; transition: all .3s;}
+.newProjectWrapper:hover{background-color: #34d891;}
+
+.fa-play{color:green; font-size: 1.25rem;}
+.fa-stop{color:red; font-size: 1.25rem;}
+
+
+/*ITEM CONTENT AREA*/
+.itemContent, .sideBar{padding: 0px;}
+
+#timerBox{background-color: #54afff; width: 100%; border-bottom: 1px solid #c3cbd8; padding: 10px;}

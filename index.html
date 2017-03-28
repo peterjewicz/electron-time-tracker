@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Simple Time Tracker</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script src="database/projectEnteries.json"></script>
+
+    <script src="react-build/react.js"></script>
+    <script src="react-build/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+    <script type="text/babel" src="reactComponents/mainRender.js"></script>
+  </head>
+  <body>
+    <div class="mainWrapper container-fluid">
+      <header class="row">
+        <div class="col-xs-6">
+            <h1>Simple Time Tracker</h1>
+        </div>
+        <div class="col-xs-6">
+            <i class="settingsIcon fa fa-cog" aria-hidden="true"></i>
+        </div>
+      </header>
+    </div>
+
+    <div class="bodyContent">
+       <div class="col-sm-4 sideBar">
+          <div id="tasksWrapper"></div>
+          <div id="newProject"></div>
+       </div>
+       <div class="col-sm-8 itemContent">
+         <div id="timerBox">Timer controls here</div>
+         <div id="timeEnteries">Your time enteries will appear here</div>
+       </div>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>

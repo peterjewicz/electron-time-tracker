@@ -1,0 +1,16 @@
+var projects = [
+  {"id": "1", "projectName": "Test Project"},
+  {"id": "2", "projectName": "Test Project Second"},
+];
+
+var tasks = [
+  {"id": "1", "projectId": 1, "taskName": "Test Task", "currentTime" : 0, "status": 0},
+  {"id": "2", "projectId": 1, "taskName": "A Second Test Task", "currentTime" : 0, "status": 0},
+  {"id": "3", "projectId": 2, "taskName": "First Task here", "currentTime" : 10, "status": 0},
+];
+
+var times = [
+  {"id": "1", "taskId": 1, "timestamp": "Test Task", "amount" : 0},
+  {"id": "2", "taskId": 1, "timestamp": "A Second Test Task", "amount" : 0},
+  {"id": "3", "taskId": 2, "timestamp": "First Task here", "amount" : 0},
+];
