@@ -19,15 +19,38 @@
 //global helper functions to display on the right side ;{><}
 //TODO change display time to more generalized form and put all helps in here
 // Move it to its own file too.
+
+/*
+* Takes an amount of seconds and outputs them to nearest hour and minute
+* @param int
+* @return String Hours:Minutes:seconds
+*/
+function formatSeconds(timeAmount){
+  var hours = 0;
+  var minutes = 0;
+
+  while(timeAmount - 3600 > 0){
+    hours++;
+    timeAmount = timeAmount - 3600;
+  }
+  while(timeAmount - 60 > 0){
+    minutes++;
+    timeAmount = timeAmount - 60;
+  }
+  
+  return hours + " Hours " + minutes + " Minutes and " + timeAmount + " Seconds"
+
+}
+
 var displayTime =  {
   display: function(item) { //takes the full item to display name and such from
        var sortedTimes =  times.filter(function(time) {
          return time.taskId == item.id;
        });
-       console.log(sortedTimes);
        var timeContent = "<h2>" + item.taskName + "</h2>";
        for(var x = 0; x < sortedTimes.length; x++){
-         timeContent += "<div>" + sortedTimes[x].id + "</div>";
+         var formattedTime = formatSeconds(sortedTimes[x].amount);
+         timeContent += "<div>Completed: " + formattedTime + " - On: "+sortedTimes[x].timestamp+"</div>";
        }
        document.getElementById('timeEnteries').innerHTML = timeContent;
   }
