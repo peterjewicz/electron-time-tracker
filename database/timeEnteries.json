@@ -1,4 +1,0 @@
-[
-  {"id": "1", "projectId": 1, "taskName": "Test Task", "currentTime" : 0, "status": 0},
-  {"id": "2", "projectId": 1, "taskName": "A Second Test Task", "currentTime" : 0, "status": 0},
-]

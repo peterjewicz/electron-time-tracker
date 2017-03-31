@@ -1,20 +1,3 @@
-// var projects = [
-//   {"id": "1", "projectName": "Test Project"},
-//   {"id": "2", "projectName": "Test Project Second"},
-// ];
-//
-// var tasks = [
-//   {"id": "1", "projectId": 1, "taskName": "Test Task", "currentTime" : 0, "status": 0},
-//   {"id": "2", "projectId": 1, "taskName": "A Second Test Task", "currentTime" : 0, "status": 0},
-//   {"id": "3", "projectId": 2, "taskName": "First Task here", "currentTime" : 10, "status": 0},
-// ];
-//
-// var times = [
-//   {"id": "1", "taskId": 1, "timestamp": "Test Task", "amount" : 0},
-//   {"id": "2", "taskId": 1, "timestamp": "A Second Test Task", "amount" : 0},
-//   {"id": "3", "taskId": 2, "timestamp": "First Task here", "amount" : 0},
-// ];
-
 
 //global helper functions to display on the right side ;{><}
 //TODO change display time to more generalized form and put all helps in here
@@ -37,7 +20,7 @@ function formatSeconds(timeAmount){
     minutes++;
     timeAmount = timeAmount - 60;
   }
-  
+
   return hours + " Hours " + minutes + " Minutes and " + timeAmount + " Seconds"
 
 }
@@ -124,11 +107,14 @@ var Project = React.createClass({
 
 var TaskWrapper = React.createClass({
   render: function() {
-    var project = this.props.projects.map(function(project) {
-      return (
-        <Project key={project.id} projectItem={project} />
-      );
-    });
+      if(projects != "") //only present if projects are set otherwise this will break.
+      {
+        var project = this.props.projects.map(function(project) {
+          return (
+            <Project key={project.id} projectItem={project} />
+          );
+        });
+    }
     return (
       <div className="projectWrapper">
           {project}
