@@ -45,3 +45,19 @@ border-top: 1px solid #22223B; cursor: pointer; transition: all .3s;}
     padding: 20px 15px;}
 
 #timeEnteries{clear:both;}
+
+
+/*PROJECT CREATOR OVERLAY*/
+.projectCreator{
+    position: fixed;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    transition: all 1s;
+    background-color: rgba(255,255,255,.85);
+}
+.projectCreator.active{
+    top: 0px;
+}

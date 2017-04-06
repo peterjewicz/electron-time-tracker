@@ -124,11 +124,41 @@ var TaskWrapper = React.createClass({
 });
 
 
+
+
 var NewProject = React.createClass({
+  getInitialState: function() {
+     return {classToPass: ""};
+  },
+  openPanel: function(){
+      if(this.state.classToPass == ""){
+        this.setState({'classToPass': 'active'});
+
+      }
+      else {
+        this.setState({'classToPass': ''});
+      }
+  },
   render: function() {
     return (
-      <div className="newProjectWrapper">
-          + Add New Project
+      <div>
+          <div onClick={this.openPanel} className="newProjectWrapper">
+              + Add New Project
+          </div>
+          <ProjectCreation active={this.state.classToPass}/>
+      </div>
+    );
+  }
+});
+
+var ProjectCreation = React.createClass({
+  render: function() {
+
+    var active = this.props.active + " projectCreator";
+    return (
+      <div className={active}>
+         <input type="text"/>
+         <button>Add Project</button>
       </div>
     );
   }
